@@ -31,6 +31,23 @@ import ToledoTrainStation from './images/Toledo Train Station, 2017.jpg';
 const SETTINGS = {
   dots: false,
   infinite: true,
+  lazyLoad: 'ondemand',
+  nextArrow: (
+    <button className="slick-arrow slick-next">
+      <i
+        style={{ color: 'white', fontSize: '1.5rem' }}
+        className="fas fa-arrow-right"
+      />
+    </button>
+  ),
+  prevArrow: (
+    <button className="slick-arrow slick-prev">
+      <i
+        style={{ color: 'white', fontSize: '1.5rem' }}
+        className="fas fa-arrow-left"
+      />
+    </button>
+  ),
   slidesToScroll: 1,
   slidesToShow: 1,
   speed: 0
@@ -58,17 +75,16 @@ const CustomSlider = styled(Slider)`
       max-height: 35rem;
     }
   }
-  .slick-dots {
-    bottom: 0;
-  }
-  .slick-dots button {
-    height: 1rem;
-    width: 1rem;
+  .slick-arrow {
     &:before {
-      font-size: 0.65rem;
-      width: 100%;
-      height: 100%;
-      color: white !important;
+      display: none;
+    }
+    i {
+      transition: 0.3s opacity;
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 `;
@@ -168,24 +184,24 @@ const App: React.FC = () => {
           </SlideInfo>
         </SlideContainer>
         <SlideContainer>
-          <img src={Skiathos} alt="madrid park bench 2" />
+          <img src={Skiathos} alt="skiathos" />
           <SlideInfo>
-            <h3>Madrid Park Bench</h3>
-            <h6>Madrid, Spain 2019</h6>
+            <h3>Skiathos Bench</h3>
+            <h6>Skiathos, Greece 2019</h6>
           </SlideInfo>
         </SlideContainer>
         <SlideContainer>
-          <img src={TokyoSubway} alt="madrid red bench" />
+          <img src={TokyoSubway} alt="tokyo" />
           <SlideInfo>
-            <h3>Madrid Red Bench</h3>
-            <h6>Madrid, Spain 2017</h6>
+            <h3>Tokyo Green Subway Seat</h3>
+            <h6>Tokyo, Japan 2017</h6>
           </SlideInfo>
         </SlideContainer>
         <SlideContainer>
-          <img src={ToledoTrainStation} alt="mundaka" />
+          <img src={ToledoTrainStation} alt="toledo" />
           <SlideInfo>
-            <h3>Mundaka</h3>
-            <h6>Mundaka, Spain 2019</h6>
+            <h3>Toledo Train Station</h3>
+            <h6>Toledo, Spain 2017</h6>
           </SlideInfo>
         </SlideContainer>
         <SlideContainer>
