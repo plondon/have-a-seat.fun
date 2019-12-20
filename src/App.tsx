@@ -31,7 +31,7 @@ import ToledoTrainStation from './images/Toledo Train Station, 2017.jpg';
 const SETTINGS = {
   dots: false,
   infinite: true,
-  lazyLoad: 'ondemand',
+  lazyLoad: 'progressive',
   nextArrow: (
     <button className="slick-arrow slick-next">
       <i
