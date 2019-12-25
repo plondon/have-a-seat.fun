@@ -278,11 +278,12 @@ const App: React.FC = () => {
       <About className={isAboutActive ? 'ABOUT-ACTIVE' : ''}>
         <img src={AboutImg} alt="about" />
         <div>
-          Sina, when the four of us were in Athens together you told me that you
-          loved the different personalities of benches from different cities. It
-          was our last conversation before Lola and I moved. I decided to make a
-          collection of benches from the places we've been to together, places
-          from recent adventures, and places I hope you get to visit.
+          Sina — When the four of us were in Athens together, you mentioned how
+          much you loved the unique personalities of benches from different
+          cities. It was the last conversation we had before Lola and I moved to
+          Madrid. I decided to make a collection of benches from the places
+          we’ve visited together since moving, places from recent
+          adventures—places that have made me think of you.
         </div>
       </About>
     </Container>
