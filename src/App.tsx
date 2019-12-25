@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 // Import photos
-import AboutImg from './images/About.jpg';
+import AboutImgSrc from './images/About.jpg';
 import ConeyIsland from './images/Coney Island, 2016.jpg';
 import KyotoRestaurantBench from './images/Kyoto Restaurant Bench, 2018.jpg';
 import Lanzarote from './images/Lanzarote, 2018.jpg';
@@ -112,7 +112,7 @@ const About = styled.div`
   width: 100%;
   padding: 2rem;
   position: absolute;
-  bottom: -385px;
+  bottom: -100vh;
   left: 0;
   display: flex;
   align-items: center;
@@ -123,12 +123,15 @@ const About = styled.div`
     height: 20rem;
   }
   &.ABOUT-ACTIVE {
-    bottom: 0px;
+    bottom: 0vh;
     transition: bottom 0.3s 0.3s;
+    @media (max-width: 767px) {
+      bottom: 3vh;
+    }
   }
   @media (max-width: 767px) {
     flex-direction: column;
-    bottom: -410px;
+    bottom: -100vh;
     img {
       margin-bottom: 1rem;
     }
@@ -143,6 +146,19 @@ const AboutButton = styled.div`
   @media (max-width: 767px) {
     bottom: 1rem;
     right: 1rem;
+  }
+`;
+const AboutContent = styled.div`
+  width: 18rem;
+  line-height: 1.3rem;
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+`;
+const AboutImage = styled.img`
+  @media (max-width: 767px) {
+    height: auto !important;
+    width: 100%;
   }
 `;
 
@@ -271,20 +287,20 @@ const App: React.FC = () => {
         </CustomSlider>
       </MainContent>
       <AboutButton onClick={() => setIsAboutActive(!isAboutActive)}>
-        <span role="img" aria-label="envelope" style={{ fontSize: '2rem' }}>
+        <span role="img" aria-label="envelope" style={{ fontSize: '3rem' }}>
           💌
         </span>
       </AboutButton>
       <About className={isAboutActive ? 'ABOUT-ACTIVE' : ''}>
-        <img src={AboutImg} alt="about" />
-        <div>
+        <AboutImage src={AboutImgSrc} alt="about" />
+        <AboutContent>
           Sina — When the four of us were in Athens together, you mentioned how
           much you loved the unique personalities of benches from different
           cities. It was the last conversation we had before Lola and I moved to
           Madrid. I decided to make a collection of benches from the places
           we’ve visited together since moving, places from recent
           adventures—places that have made me think of you.
-        </div>
+        </AboutContent>
       </About>
     </Container>
   );
