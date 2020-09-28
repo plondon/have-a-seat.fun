@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://have-a-seat.fun/
+
+### A collection of benches from around the world.
 
 ## Available Scripts
 
