@@ -1,6 +1,10 @@
 https://have-a-seat.fun/
 
-### A collection of benches from around the world.
+## About
+
+A collection of benches from around the world.
+
+## React things:
 
 ## Available Scripts
 
