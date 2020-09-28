@@ -4,8 +4,6 @@ https://have-a-seat.fun/
 
 A collection of benches from around the world.
 
-## React things:
-
 ## Available Scripts
 
 In the project directory, you can run:
